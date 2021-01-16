@@ -2,7 +2,7 @@ table#tlayout {
 	background: white; border: currentColor; border-image: none; border-collapse: separate;
 }
 html {
-	background-color: rgb(238, 238, 238);
+	background-color: rgb(238, 238, 238); line-height: 1.3;
 }
 body {
 	margin: 30px auto; padding: 10px 50px 30px; text-align: left; color: rgb(0, 0, 0); font-family: Georgia, serif; max-width: 960px; background-color: rgb(255, 255, 255);
@@ -101,7 +101,7 @@ h3 {
 	font-size: 110%; border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none;
 }
 p {
-	padding: 0px; line-height: 1.3; margin-top: 0em; margin-bottom: 0.8em;
+	padding: 0px; margin-top: 0em; margin-bottom: 0.8em;
 }
 pre {
 	margin: 0px; padding: 0px;
@@ -146,7 +146,7 @@ p + ol {
 	margin-top: -0.5em;
 }
 li {
-	margin-top: 0.9em;
+	margin-top: 0.5em;
 }
 ol {
 	list-style-type: decimal; list-style-position: outside;
@@ -282,26 +282,26 @@ table.imgtable td {
 }
 table
 {
-padding: 5px;
+	padding: 5px;
 }
 
-table.pub_table,td.pub_td1,td.pub_td2
+table.pub_table, td.pub_td1, td.pub_td2
 {
-padding: 8px;
-/* width: 860px; */
-    border-collapse: separate;
-    border-spacing: 15px;
-    margin-top: -5px;
+	padding: 8px;
+	/* width: 860px; */
+	border-collapse: separate;
+	border-spacing: 15px;
+	margin-top: -5px;
 }
 
 td.pub_td1
 {
-width:50px;
+	width:50px;
 }
 td.pub_td1 img
 {
   /*height:120px;*/
-  width: 160px;
+	width: 160px;
 }
 
 table.pub_table tr {
