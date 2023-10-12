@@ -1,0 +1,554 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Progressive3D: Progressively Local Editing for Text-to-3D Content Creation with Complex Semantic Prompts</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+  
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/result.css">
+  <link rel="icon" href="./static/images/page.svg">
+
+
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Progressive3D: Progressively Local Editing for Text-to-3D Content Creation with Complex Semantic Prompts</h1>
+          
+          <div class="is-size-5 publication-authors">
+            <span class="footnote">Arxiv 2023</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="my-hr">
+  <hr>
+</div>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Recent text-to-3D generation methods achieve impressive 3D content creation capacity thanks to the advances in image diffusion models and optimizing strategies.
+            However, current methods struggle to generate correct 3D content for a complex prompt in semantics, <i>i.e.</i>, a prompt describing multiple interacted objects binding with different attributes.
+            In this work, we propose a general framework named <b>Progressive3D</b>, which decomposes the entire generation into a series of locally progressive editing steps to create precise 3D content for complex prompts, and we constrain the content change to only occur in regions determined by user-defined region prompts in each editing step.
+            Furthermore, we propose an overlapped semantic component suppression technique to encourage the optimization process to focus more on the semantic differences between prompts.
+            Extensive experiments demonstrate that the proposed Progressive3D framework generates precise 3D content for prompts with complex semantics and is general for various text-to-3D methods driven by different 3D representations.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+    <hr>
+
+    <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Method</h2>
+          <img src="./static/images/framework.png">
+          <br>
+          <br>
+          <div class="content has-text-justified">
+            <p>
+              <b>Overview of a local editing step of our proposed Progressive3D.</b> Given a source representation supervised by source prompt, our framework aims to generate a target representation
+               conforming to the input target prompt in 3d space defined by the region prompt. 
+               Conditioned on the 2D mask, we constrain the 3D content with region-related constraints. 
+               We further propose an Overlapped Semantic Component Suppression technique to impose the optimization focusing more on the semantic difference for precise progressive creation.
+            </p>
+          </div> 
+          
+        </div>
+      </div>
+    
+    <hr>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Progressive Editing Process</h2>
+        <div class="content has-text-justified">
+          <p>
+            Current text-to-3D methods suffer from challenges when given prompts describing multiple objects binding with different attributes. 
+            Compared to generating with existing methods, generating with Progressive3D produces 3D content consistent with given prompts.
+          </p>
+        </div>
+
+        <table>
+          <tr>
+            <td>
+              Generate with current methods
+            </td>
+            <td>
+               
+            </td>
+            <td colspan="7">
+              Generate with Progressive3D
+            </td>
+          </tr>
+
+          <tr>
+            <td style="width: 17.2%">
+              <video id="matting-video" controls playsinline height="100%">
+                <source src="./static/videos/astronaut0.mp4"
+                        type="video/mp4">
+              </video>
+            </td>
+            <td>
+              <img src="./static/images/line.png">
+            </td>
+            <td style="width: 17.2%">
+              <video id="matting-video" controls playsinline height="100%">
+                <source src="./static/videos/astronaut1.mp4"
+                        type="video/mp4">
+              </video>
+            </td>
+            <td>
+              <img src="./static/images/arrow.png">
+            </td>
+            <td style="width: 17.2%">
+              <video id="matting-video" controls playsinline height="100%">
+                <source src="./static/videos/astronaut2.mp4"
+                        type="video/mp4">
+              </video>
+            </td>
+            <td>
+              <img src="./static/images/arrow.png">
+            </td>
+            <td style="width: 17.2%">
+              <video id="matting-video" controls playsinline height="100%">
+                <source src="./static/videos/astronaut3.mp4"
+                        type="video/mp4">
+              </video>
+            </td>
+            <td>
+              <img src="./static/images/arrow.png">
+            </td>
+            <td style="width: 17.2%">
+              <video id="matting-video" controls playsinline height="100%">
+                <source src="./static/videos/astronaut4.mp4"
+                        type="video/mp4">
+              </video>
+            </td>
+          </tr>
+          
+          <tr>
+            <td style="width: 17.2%">
+              <video id="matting-video" controls playsinline height="100%">
+                <source src="./static/videos/vase0.mp4"
+                        type="video/mp4">
+              </video>
+            </td>
+            <td>
+              <img src="./static/images/line.png">
+            </td>
+            <td style="width: 17.2%">
+              <video id="matting-video" controls playsinline height="100%">
+                <source src="./static/videos/vase1.mp4"
+                        type="video/mp4">
+              </video>
+            </td>
+            <td>
+              <img src="./static/images/arrow.png">
+            </td>
+            <td style="width: 17.2%">
+              <video id="matting-video" controls playsinline height="100%">
+                <source src="./static/videos/vase2.mp4"
+                        type="video/mp4">
+              </video>
+            </td>
+            <td>
+              <img src="./static/images/arrow.png">
+            </td>
+            <td style="width: 17.2%">
+              <video id="matting-video" controls playsinline height="100%">
+                <source src="./static/videos/vase3.mp4"
+                        type="video/mp4">
+              </video>
+            </td>
+            <td>
+              <img src="./static/images/arrow.png">
+            </td>
+            <td style="width: 17.2%">
+              <video id="matting-video" controls playsinline height="100%">
+                <source src="./static/videos/vase4.mp4"
+                        type="video/mp4">
+              </video>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="width: 17.2%">
+              <video id="matting-video" controls playsinline height="100%">
+                <source src="./static/videos/ironman0.mp4"
+                        type="video/mp4">
+              </video>
+            </td>
+            <td>
+              <img src="./static/images/line.png">
+            </td>
+            <td style="width: 17.2%">
+              <video id="matting-video" controls playsinline height="100%">
+                <source src="./static/videos/ironman1.mp4"
+                        type="video/mp4">
+              </video>
+            </td>
+            <td>
+              <img src="./static/images/arrow.png">
+            </td>
+            <td style="width: 17.2%">
+              <video id="matting-video" controls playsinline height="100%">
+                <source src="./static/videos/ironman2.mp4"
+                        type="video/mp4">
+              </video>
+            </td>
+            <td>
+              <img src="./static/images/arrow.png">
+            </td>
+            <td style="width: 17.2%">
+              <video id="matting-video" controls playsinline height="100%">
+                <source src="./static/videos/ironman3.mp4"
+                        type="video/mp4">
+              </video>
+            </td>
+            <td>
+              <img src="./static/images/arrow.png">
+            </td>
+            <td style="width: 17.2%">
+              <video id="matting-video" controls playsinline height="100%">
+                <source src="./static/videos/ironman4.mp4"
+                        type="video/mp4">
+              </video>
+            </td>
+          </tr>
+          
+        </table>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">2D Mask Generation</h2>
+        <div class="content has-text-justified">
+          <p>
+            Progressive3D supports different editable region definations since their depth and opacity can be obtained from rendering.
+          </p>
+        </div>
+      <table>
+        <tr>
+          <td>
+            Source content
+          </td>
+          <td></td>
+          <td>
+            3D bounding box
+          </td>
+          <td>
+            2D mask
+          </td>
+          <td></td>
+          <td>
+            Custom mesh
+          </td>
+          <td>
+            2D mask
+          </td>
+        </tr>
+
+        <tr>
+          <td style="width: 18.5%">
+            <video id="matting-video" controls playsinline height="100%">
+              <source src="./static/videos/astronaut2.mp4"
+                      type="video/mp4">
+            </video>
+          </td>
+          <td>
+            <img src="./static/images/line.png">
+          </td>
+          <td style="width: 18.5%">
+            <video id="matting-video" controls playsinline height="100%">
+              <source src="./static/videos/box.mp4"
+                      type="video/mp4">
+            </video>
+          </td>
+          <td style="width: 18.5%">
+            <video id="matting-video" controls playsinline height="100%">
+              <source src="./static/videos/mask1.mp4"
+                      type="video/mp4">
+            </video>
+          </td>
+          <td>
+            <img src="./static/images/line.png">
+          </td>
+          <td style="width: 18.5%">
+            <video id="matting-video" controls playsinline height="100%">
+              <source src="./static/videos/mesh.mp4"
+                      type="video/mp4">
+            </video>
+          </td>
+          <td style="width: 18.5%">
+            <video id="matting-video" controls playsinline height="100%">
+              <source src="./static/videos/mask2.mp4"
+                      type="video/mp4">
+            </video>
+          </td>
+        </tr>
+      </table>
+      </div>
+    </div>
+
+    <hr>
+    
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Qualititive Ablations</h2>
+        <!-- <div class="content has-text-justified">
+          <p>
+            In addition to zero-shot generation, our method is flexible to accept a customized 3D model as the initialization
+            , thereby facilitating user-guided asset generation.
+          </p>
+        </div> -->
+      <table>
+        <tr>
+          <td>
+            Source content
+          </td>
+          <td></td>
+          <td>
+            w/o Loss_consisnt
+          </td>
+          <td></td>
+          <td>
+            w/o Loss_initial
+          </td>
+          <td></td>
+          <td>
+            w/o OSCS
+          </td>
+          <td></td>
+          <td>
+            Ours
+          </td>
+        </tr>
+
+        <tr>
+          <td style="width: 18.5%">
+            <video id="matting-video" controls playsinline height="100%">
+              <source src="./static/videos/astronaut2.mp4"
+                      type="video/mp4">
+            </video>
+          </td>
+          <td></td>
+          <td style="width: 18.5%">
+            <video id="matting-video" controls playsinline height="100%">
+              <source src="./static/videos/ablation1.mp4"
+                      type="video/mp4">
+            </video>
+          </td>
+          <td></td>
+          <td style="width: 18.5%">
+            <video id="matting-video" controls playsinline height="100%">
+              <source src="./static/videos/ablation2.mp4"
+                      type="video/mp4">
+            </video>
+          </td>
+          <td></td>
+          <td style="width: 18.5%">
+            <video id="matting-video" controls playsinline height="100%">
+              <source src="./static/videos/ablation3.mp4"
+                      type="video/mp4">
+            </video>
+          </td>
+          <td></td>
+          <td style="width: 18.5%">
+            <video id="matting-video" controls playsinline height="100%">
+              <source src="./static/videos/ablation4.mp4"
+                      type="video/mp4">
+            </video>
+          </td>
+        </tr>
+      </table>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">More Results</h2>
+        <div class="content has-text-justified">
+          <p>
+            More comparison results are provided to demonstrate Progressive3D significantly improve the creation capacity with complex prompts for current text-to-3D methods.
+            For each pair of samples, the left one is the generated content of the original method, and the right one is created by leveraging Progressive3D. 
+          </p>
+        </div>
+        
+        <!-- <div class="content has-text-justified">
+          <p>
+            In addition to zero-shot generation, our method is flexible to accept a customized 3D model as the initialization
+            , thereby facilitating user-guided asset generation.
+          </p>
+        </div> -->
+      <table>
+        
+          
+
+        <tr>
+          <td style="width: 24%">
+            <video id="matting-video" controls playsinline height="100%">
+              <source src="./static/videos/table1.mp4"
+                      type="video/mp4">
+            </video>
+          </td>
+          <td style="width: 24%">
+            <video id="matting-video" controls playsinline height="100%">
+              <source src="./static/videos/table2.mp4"
+                      type="video/mp4">
+            </video>
+          <td></td>
+          <td style="width: 24%">
+            <video id="matting-video" controls playsinline height="100%">
+              <source src="./static/videos/cabinet1.mp4"
+                      type="video/mp4">
+            </video>
+          </td>
+          <td style="width: 24%">
+            <video id="matting-video" controls playsinline height="100%">
+              <source src="./static/videos/cabinet2.mp4"
+                      type="video/mp4">
+            </video>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            An origami box and a ceramic tea pot on a golden table.
+          </td>
+          
+          <td></td>
+          <td colspan="2">
+            A yellow pineapple in a hexagonal cup on a round cabinet.
+          </td>
+        </tr>
+
+        <tr>
+          <td style="width: 24%">
+            <video id="matting-video" controls playsinline height="100%">
+              <source src="./static/videos/robot1.mp4"
+                      type="video/mp4">
+            </video>
+          </td>
+          <td style="width: 24%">
+            <video id="matting-video" controls playsinline height="100%">
+              <source src="./static/videos/robot2.mp4"
+                      type="video/mp4">
+            </video>
+          <td></td>
+          <td style="width: 24%">
+            <video id="matting-video" controls playsinline height="100%">
+              <source src="./static/videos/house1.mp4"
+                      type="video/mp4">
+            </video>
+          </td>
+          <td style="width: 24%">
+            <video id="matting-video" controls playsinline height="100%">
+              <source src="./static/videos/house2.mp4"
+                      type="video/mp4">
+            </video>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            A toy robot wearing a golden shirt and a wooden crown.
+          </td>
+          
+          <td></td>
+          <td colspan="2">
+            A model of a round building with square roof on a hexagonal park.
+          </td>
+        </tr>
+
+        <tr>
+          <td style="width: 24%">
+            <video id="matting-video" controls playsinline height="100%">
+              <source src="./static/videos/dog1.mp4"
+                      type="video/mp4">
+            </video>
+          </td>
+          <td style="width: 24%">
+            <video id="matting-video" controls playsinline height="100%">
+              <source src="./static/videos/dog2.mp4"
+                      type="video/mp4">
+            </video>
+          <td></td>
+          <td style="width: 24%">
+            <video id="matting-video" controls playsinline height="100%">
+              <source src="./static/videos/army1.mp4"
+                      type="video/mp4">
+            </video>
+          </td>
+          <td style="width: 24%">
+            <video id="matting-video" controls playsinline height="100%">
+              <source src="./static/videos/army2.mp4"
+                      type="video/mp4">
+            </video>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            A standing black Shiba Inu wearing a golden sweater and silver boots.
+          </td>
+          
+          <td></td>
+          <td colspan="2">
+            A head of terracotta army wearing a red sunglass and gray hat.
+          </td>
+        </tr>
+
+      </table>
+      </div>
+    </div>
+
+  </div>   
+</section>  
+
+</body>
+</html>
