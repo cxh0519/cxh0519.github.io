@@ -1,419 +1,315 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-  <meta name="google-site-verification" content="xDNWUvx6Q5EWK5YYSyKvK8DZTmvXhKsGX203Ll-BFFE" >	
-  <meta name=viewport content=“width=800”>
-  <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <style type="text/css">
-  @import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,900,900italic,300italic,300);
-  /* @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons); */
-    /* Color scheme stolen from Sergey Karayev */
-    a {
-    /*color: #b60a1c;*/
-    color: #1772d0;
-    /*color: #bd0a36;*/
-    text-decoration:none;
-    }
-    a:focus, a:hover {
-    color: #f09228;
-    text-decoration:none;
-    }
-    body,td,th,tr,p,a {
-    font-family: 'Roboto', sans-serif;
-    font-size: 15px;
-    font-weight: 300;
-    }
-    strong {
-    font-family: 'Roboto', sans-serif;
-    /*font-family: 'Lato', Verdana, Helvetica, sans-serif;*/
-    /*font-family: 'Avenir Next';*/
-    font-size: 15px;
-    font-weight: 400;
-    }
-    heading {
-    /*font-family: 'Lato', Verdana, Helvetica, sans-serif;*/
-    font-family: 'Roboto', sans-serif;
-    /*font-family: 'Avenir Next';*/
-    /*src: url("./fonts/Roboto_Mono_for_Powerline.ttf");*/
-    font-size: 24px;
-    font-weight: 400;
-    }
-    papertitle {
-    /*font-family: 'Lato', Verdana, Helvetica, sans-serif;*/
-    font-family: 'Roboto', sans-serif;
-    /*font-family: 'Avenir Next';*/
-    /*src: url("./fonts/Roboto_Mono_for_Powerline.ttf");*/
-    font-size: 15px;
-    font-weight:500;
-    }
-    name {
-    /*font-family: 'Lato', Verdana, Helvetica, sans-serif;*/
-    font-family: 'Roboto', sans-serif;
-    /*font-family: 'Avenir Next';*/
-    font-weight: 400;
-    font-size: 32px;
-    }
-    .one
-    {
-    width: 160px;
-    height: 140px;
-    position: relative;
-    }
-    .two
-    {
-    width: 160px;
-    height: 160px;
-    position: absolute;
-    transition: opacity .2s ease-in-out;
-    -moz-transition: opacity .2s ease-in-out;
-    -webkit-transition: opacity .2s ease-in-out;
-    }
-    .fade {
-     transition: opacity .2s ease-in-out;
-     -moz-transition: opacity .2s ease-in-out;
-     -webkit-transition: opacity .2s ease-in-out;
-    }
-    span.highlight {
-        background-color: #ffffd0;
-    }
-    br {
-            display: block; /* makes it have a width */
-            content: ""; /* clears default height */
-            margin-top: 5; /* change this to whatever height you want it */
-    }
-  </style>
-  <!-- <link rel="icon" type="image/png" href="media/preview.jpg"> -->
-  <title>Xinhua Cheng - Homepage</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-  <script src="script/functions.js"></script>
+    <title>Xinhua Cheng - Homepage</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description" content="Xinhua Cheng's homepage" />
+    <link rel="icon" href="/media/favicon.ico" />
+    <style type="text/css">
+      @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap);
+      html {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        max-width: 100%;
+        height: 100%;
+      }
+      body {
+        padding: 0;
+        margin: 0 auto;
+        max-width: 800px;
+        min-width: 375px;
+      }
+      a {
+        text-decoration: none;
+        color: #1772d0;
+        cursor: pointer;
+      }
+      a:hover {
+        color: #f09228;
+      }
+      strong {
+        font-weight: 400;
+      }
+      header {
+        font-size: 15px;
+        min-height: 273px;
+        padding: 20px;
+        margin: 8px 20px;
+        padding-right: 220px;
+        position: relative;
+      }
+      header > picture {
+        position: absolute;
+        width: 200px;
+        height: 273px;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+      @media (max-width: 540px) {
+        header {
+          padding-right: 0;
+        }
+        header > picture {
+          position: static;
+          display: block;
+          margin: auto;
+        }
+      }
+      .self-intro-name {
+        padding: 14px 0;
+        text-align: center;
+        font-weight: 400;
+        font-size: 32px;
+      }
+      .self-intro-links {
+        text-align: center;
+      }
+      h1 {
+        font-size: 24px;
+        padding: 20px;
+        margin: 0;
+        font-weight: 400;
+      }
+      .publication {
+        padding: 20px;
+        font-size: 15px;
+      }
+      .publication p {
+        margin: 0;
+      }
+      .publication > picture {
+        float: left;
+        object-fit: contain;
+        margin-right: 20px;
+        overflow: hidden;
+      }
+      .publication > picture > img {
+        transition: transform ease-in-out .3s;
+      }
+      .publication > picture > img:hover {
+        transform: scale(1.1);
+      }
+      .publication .title {
+        font-weight: 500;
+        margin-bottom: 5px;
+      }
+      .publication .authors {
+        margin-bottom: 5px;
+      }
+      .publication .venue {
+        margin-bottom: 5px;
+      }
+      .publication .links {
+        margin-bottom: 5px;
+      }
+      .publication .link::before {
+        content: "[";
+      }
+      .publication .link::after {
+        content: "]";
+      }
+      .publication .link {
+        margin-right: 3px;
+      }
+      .publication .desc {
+        margin-top: 14px;
+        font-size: 14px;
+      }
+      footer {
+        text-align: right;
+        padding: 20px;
+        font-size: 14px;
+      }
+    </style>
   </head>
-
-  <body><table width="800" border="0" align="center" cellspacing="0" cellpadding="0"><tr><td>
-  <!-- Biography -->
-  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-  <tr>
-    <td width="67%" valign="middle">
-      <p align="center">
-        <name>Xinhua Cheng (程鑫华)</name>
-      </p>
-      <p>
-        I am a third-year master student of computer applications technology at <a href="https://www.ece.pku.edu.cn/">School of Electron and Computer Engineering</a>, <a href="https://www.pku.edu.cn/">Peking University</a>, advised by Prof. <a href="https://jianzhang.tech/">Jian Zhang</a>. Before this, I got a B.E. degree of computer science at <a href="https://cs.scu.edu.cn/">College of Computer Science</a>, <a href="https://www.scu.edu.cn/">Sichuan University</a>. 
-      </p>
-      <p>
-        My recent research interests are 3D computer vision, especially text-to-3D creation and editing.
-      </p>
-
-      <p align=center>
-        <a href="mailto:chengxinhua@stu.pku.edu.cn">Email</a> &nbsp;|&nbsp;
-        <a href="https://scholar.google.com/citations?user=NI4c3kcAAAAJ&hl=zh-CN">Google Scholar</a> &nbsp;|&nbsp;
-        <a href="https://dblp.uni-trier.de/pid/260/2943.html">DBLP</a> &nbsp;|&nbsp;
-        <a href="https://github.com/cxh0519/">GitHub</a>
-      </p>
-    </td>
-    <td width="33%">
-      <img src="media/profile.jpg" width="250" alt="headshot">
-    </td>
-  </tr>
-  </table>
-
-  <!-- Logo -->
-  <!-- <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-  <tr>
-    <td width="10%" valign="middle">
-      <a href="https://ethz.ch/en.html"><img src="media/eth_logo.png" width="120"></a>
-    </td>
-  </tr>
-  </table> -->
-  
-  <!-- News -->
-  <!-- <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-  <tr>
-    <td>
-      <heading>News</heading>
-        <ul>
-          <li><strong>10/2022</strong> Invited to give a talk on large-scale scene reconstruction with NeRF at <a href="https://www.computationalimaging.org/">Stanford University</a> (<a href="files/talk_stanford.pdf">Slides</a>). </li>
-          <li><strong>09/2022</strong> Our paper <a href="https://niujinshuchong.github.io/monosdf/"><strong>MonoSDF</strong></a> is accepted to <strong>NeurIPS 2022</strong>. </li>
-        </ul>
-    </td>
-  </tr>
-  </table> -->
-
-  <!-- Publications -->
-  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-    <tr>
-      <td colspan="2">
-        <heading>Selected Publications</heading> (* indicates equal contribution)
-      </td>
-    </tr>
-    
-    <tr onmouseout="openscene_stop()" onmouseover="openscene_start()">  
-      <td width="25%">
-        <div class="one">
-        <!-- <div class="two" id = 'openscene_shape'>
-        <video  width="160" height="100" muted autoplay loop>
-            <source src="media/openscene_teaser.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video></div> -->
-        <img src='media/Progressive3D.png' width="160" height="120" style="padding-top: 10px;"></div>
-        <script type="text/javascript">
-        function openscene_start() { 
-        document.getElementById('openscene_shape').style.opacity = "1";
-        }
-        function openscene_stop() { 
-        document.getElementById('openscene_shape').style.opacity = "0"; 
-        }
-        openscene_stop()
-        </script>
-      </td>
-      <td valign="top" width="75%">
-        <papertitle>
-          Progressive3D: Progressively Local Editing for Text-to-3D Content Creation with Complex Semantic Prompts
-        </papertitle>
-        <br>
-        <strong>Xinhua Cheng</strong>, 
-        Tianyu Yang,
-        Jianan Wang,
-        Yu Li,
-        Lei Zhang,
-        <a href="https://jianzhang.tech/">Jian Zhang</a>,
-        <a href="https://jianzhang.tech/">Li Yuan</a>
-        <br>
-        International Conference on Learning Representations (<strong>ICLR</strong>), 2024
-        <br>
-        [<a href="https://arxiv.org/abs/2310.11784">Paper</a>]
-        [<a href="https://github.com/cxh0519/Progressive3D">Code</a>]
-        [<a href="https://cxh0519.github.io/projects/Progressive3D">Page</a>]
-        <p style="font-size: 14px;"> We introduce progressive local editing to create precise 3D content consistent with prompts describing multiple interacted objects binding with different attributes. </p>
-      </td>
-    </tr>
-
-    <tr onmouseout="openscene_stop()" onmouseover="openscene_start()">  
-      <td width="25%">
-        <div class="one">
-        <!-- <div class="two" id = 'openscene_shape'>
-        <video  width="160" height="100" muted autoplay loop>
-            <source src="media/openscene_teaser.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video></div> -->
-        <img src='media/NSDS.png' width="160" height="140"></div>
-        <script type="text/javascript">
-        function openscene_start() { 
-        document.getElementById('openscene_shape').style.opacity = "1";
-        }
-        function openscene_stop() { 
-        document.getElementById('openscene_shape').style.opacity = "0"; 
-        }
-        openscene_stop()
-        </script>
-      </td>
-      <td valign="top" width="75%">
-        <papertitle>
-          Null-Space Diffusion Sampling for Zero-Shot Point Cloud Completion
-        </papertitle>
-        <br>
-        <strong>Xinhua Cheng</strong>*, 
-        Nan Zhang*,
-        Jiwen Yu,
-        Yinhuai Wang, 
-        Ge Li,
-        <a href="https://jianzhang.tech/">Jian Zhang</a>
-        <br>
-        International Joint Conference on Artificial Intelligence (<strong>IJCAI</strong>), 2023
-        <br>
-        [<a href="https://www.ijcai.org/proceedings/2023/0069.pdf">Paper</a>]
-        <p style="font-size: 14px;">We propose a zero-shot point cloud completion framework by only refining the null-space content during the reverse process of a pre-trained diffusion model.</p>
-      </td>
-    </tr>
-
-    <tr onmouseout="openscene_stop()" onmouseover="openscene_start()">  
-      <td width="25%">
-        <div class="one">
-        <!-- <div class="two" id = 'openscene_shape'>
-        <video  width="160" height="100" muted autoplay loop>
-            <source src="media/openscene_teaser.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video></div> -->
-        <img src='media/PCFF.png' width="160" height="140"></div>
-        <script type="text/javascript">
-        function openscene_start() { 
-        document.getElementById('openscene_shape').style.opacity = "1";
-        }
-        function openscene_stop() { 
-        document.getElementById('openscene_shape').style.opacity = "0"; 
-        }
-        openscene_stop()
-        </script>
-      </td>
-      <td valign="top" width="75%">
-        <papertitle>
-          Panoptic Compositional Feature Field for Editable Scene Rendering with Network-Inferred Labels via Metric Learning
-        </papertitle>
-        <br>
-        <strong>Xinhua Cheng</strong>, 
-        <a href="https://github.com/yanmin-wu">Yanmin Wu</a>,
-        <a href="https://mxjia.github.io/">Mengxi Jia</a>,
-        <a href="https://github.com/Akaneqwq">Qian Wang</a>, 
-        <a href="https://jianzhang.tech/">Jian Zhang</a>
-        <br>
-        Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>), 2023
-        <br>
-        [<a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Cheng_Panoptic_Compositional_Feature_Field_for_Editable_Scene_Rendering_With_Network-Inferred_CVPR_2023_paper.pdf">Paper</a>]
-        <p style="font-size: 14px;">We introduce metric learing for leveraging 2D network-inferred labels to obtain discriminating feature fields, leading to 3D segmentation and editing results.</p>
-      </td>
-    </tr>
-
-    <tr onmouseout="openscene_stop()" onmouseover="openscene_start()">  
-      <td width="25%">
-        <div class="one">
-        <!-- <div class="two" id = 'openscene_shape'>
-        <video  width="160" height="100" muted autoplay loop>
-            <source src="media/openscene_teaser.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video></div> -->
-        <img src='media/EDA.png' width="160" height="130"></div>
-        <script type="text/javascript">
-        function openscene_start() { 
-        document.getElementById('openscene_shape').style.opacity = "1";
-        }
-        function openscene_stop() { 
-        document.getElementById('openscene_shape').style.opacity = "0"; 
-        }
-        openscene_stop()
-        </script>
-      </td>
-      <td valign="top" width="75%">
-        <papertitle>
-          EDA: Explicit Text-Decoupling and Dense Alignment for 3D Visual Grounding
-        </papertitle>
-        <br>
-        <a href="https://github.com/yanmin-wu">Yanmin Wu</a>,
-        <strong>Xinhua Cheng</strong>, 
-        <a href="https://zrrskywalker.github.io/">Renrui Zhang</a>, 
-        Zesen Cheng, 
-        <a href="https://jianzhang.tech/">Jian Zhang</a>
-        <br>
-        Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>), 2023
-        <br>
-        [<a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Wu_EDA_Explicit_Text-Decoupling_and_Dense_Alignment_for_3D_Visual_Grounding_CVPR_2023_paper.pdf">Paper</a>]
-        [<a herf="https://github.com/yanmin-wu/EDA">Code</a>]
-        <p style="font-size: 14px;">we explicitly decouple the textual attributes and conduct dense alignment between such fine-grained language and point cloud objects for 3D visual grounding. 
+  <body>
+    <header>
+      <div class="self-intro-name">Xinhua Cheng (程鑫华)</div>
+      <picture>
+        <!-- <source srcset="/media/IDPhoto.avif" type="image/avif" /> -->
+        <img width="200" height="273" src="media/profile.jpg" alt="ID Photo" />
+      </picture>
+      <div>
+        <p>
+          I am a third-year master student of computer applications technology at 
+          <a href="https://www.ece.pku.edu.cn/">School of Electron and Computer Engineering</a>, 
+          <a href="https://www.pku.edu.cn/">Peking University</a>, advised by Prof. 
+          <a href="https://yuanli2333.github.io/">Li Yuan</a> and
+          <a href="https://jianzhang.tech/">Jian Zhang</a>. 
+          Before this, I got a B.E. degree of computer science at 
+          <a href="https://cs.scu.edu.cn/">College of Computer Science</a>, 
+          <a href="https://www.scu.edu.cn/">Sichuan University</a>.
         </p>
-      </td>
-    </tr>
+        <p>
+          My recent research interests includes 3D vision and AIGC, especially text-to-3D content creation and editing.
+        </p>
+        <div class="self-intro-links">
+          <a href="mailto:chengxinhua@stu.pku.edu.cn">Email</a>
+          &nbsp;|&nbsp;
+          <a href="https://scholar.google.com/citations?user=NI4c3kcAAAAJ">Google Scholar</a>
+          &nbsp;|&nbsp;
+          <a href="https://dblp.uni-trier.de/pid/260/2943.html">DBLP</a> 
+          &nbsp;|&nbsp;
+          <a href="https://github.com/cxh0519/">GitHub</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <h1>Selected Publications</h1>
+      <div class="publication">
+        <picture>
+          <img src="media/Progressive3D.png" width="180" height="140" alt="Progressive3D: Progressively Local Editing for Text-to-3D Content Creation with Complex Semantic Prompts" />
+        </picture>
+        <div>
+          <p class="title">Progressive3D: Progressively Local Editing for Text-to-3D Content Creation with Complex Semantic Prompts</p>
+          <div class="authors">
+            <strong>Xinhua Cheng</strong>, 
+            <a href="https://tianyu-yang.com/">Tianyu Yang,</a>
+            <a href="https://scholar.google.com/citations?user=mt5mvZ8AAAAJ">Jianan Wang,</a>
+            <a href="https://yu-li.github.io/">Yu Li,</a>
+            <a href="https://www.leizhang.org/">Lei Zhang,</a>
+            <a href="https://jianzhang.tech/">Jian Zhang</a>,
+            <a href="https://yuanli2333.github.io/">Li Yuan</a>
+          </div>
+          <p class="venue">International Conference on Learning Representations (<strong>ICLR</strong>), 2024</p>
+          <div class="links">
+            <span class="link"><a href="https://arxiv.org/abs/2310.11784">Paper</a></span>
+            <span class="link"><a href="https://github.com/cxh0519/Progressive3D">Project</a></span>
+            <span class="link"><a href="https://cxh0519.github.io/projects/Progressive3D">Code</a></span>
+          </div>
+          <p class="desc">
+            We introduce progressive local editing to create precise 3D content consistent with prompts describing multiple interacted objects binding with different attributes.
+          </p>
+        </div>
+      </div>
 
-    <tr onmouseout="openscene_stop()" onmouseover="openscene_start()">  
-      <td width="25%">
-        <div class="one">
-        <!-- <div class="two" id = 'openscene_shape'>
-        <video  width="160" height="100" muted autoplay loop>
-            <source src="media/openscene_teaser.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video></div> -->
-        <img src='media/MSDPA.png' width="160" height="140"></div>
-        <script type="text/javascript">
-        function openscene_start() { 
-        document.getElementById('openscene_shape').style.opacity = "1";
-        }
-        function openscene_stop() { 
-        document.getElementById('openscene_shape').style.opacity = "0"; 
-        }
-        openscene_stop()
-        </script>
-      </td>
-      <td valign="top" width="75%">
-        <papertitle>
-          More is better: Multi-source Dynamic Parsing Attention for Occluded Person Re-identification
-        </papertitle>
-        <br>
-        <strong>Xinhua Cheng</strong>*, 
-        <a href="https://mxjia.github.io/">Mengxi Jia</a>*,
-        <a href="https://github.com/Akaneqwq">Qian Wang</a>, 
-        <a href="https://jianzhang.tech/">Jian Zhang</a>
-        <br>
-        ACM International Conference on Multimedia (<strong>ACM MM</strong>), 2022
-        <br>
-        [<a href="https://dl.acm.org/doi/abs/10.1145/3503161.3547819">Paper</a>] 
-        <p style="font-size: 14px;">We introduce the multi-source knowledge ensemble in occluded re-ID to effective leverage external semantic cues learned from different domains.</p>
-      </td>
-    </tr>
+      <div class="publication">
+        <picture>
+          <img src="media/NSDS.png" width="180" height="140" alt="Null-Space Diffusion Sampling for Zero-Shot Point Cloud Completion" />
+        </picture>
+        <div>
+          <p class="title">Null-Space Diffusion Sampling for Zero-Shot Point Cloud Completion</p>
+          <div class="authors">
+            <strong>Xinhua Cheng</strong>*, 
+            Nan Zhang*,
+            <a href="https://vvictoryuki.github.io/website/">Jiwen Yu</a>
+            <a herf="https://vvictoryuki.github.io/website/">Yinhuai Wang</a>, 
+            Ge Li,
+            <a href="https://jianzhang.tech/">Jian Zhang</a>
+          </div>
+          <p class="venue">International Joint Conference on Artificial Intelligence (<strong>IJCAI</strong>), 2023</p>
+          <div class="links">
+            <span class="link"><a href="https://www.ijcai.org/proceedings/2023/0069.pdf">Paper</a></span>
+          </div>
+          <p class="desc">
+            We propose a zero-shot point cloud completion framework by only refining the null-space content during the reverse process of a pre-trained diffusion model.
+          </p>
+        </div>
+      </div>
 
-    <tr onmouseout="openscene_stop()" onmouseover="openscene_start()">  
-      <td width="25%">
-        <div class="one">
-        <!-- <div class="two" id = 'openscene_shape'>
-        <video  width="160" height="100" muted autoplay loop>
-            <source src="media/openscene_teaser.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video></div> -->
-        <img src='media/VTB.png' width="160" height="130"></div>
-        <script type="text/javascript">
-        function openscene_start() { 
-        document.getElementById('openscene_shape').style.opacity = "1";
-        }
-        function openscene_stop() { 
-        document.getElementById('openscene_shape').style.opacity = "0"; 
-        }
-        openscene_stop()
-        </script>
-      </td>
-      <td valign="top" width="75%">
-        <papertitle>
-          A Simple Visual-Textual Baseline for Pedestrian Attribute Recognition
-        </papertitle>
-        <br>
-        <strong>Xinhua Cheng</strong>*, 
-        <a href="https://mxjia.github.io/">Mengxi Jia</a>*,
-        <a href="https://github.com/Akaneqwq">Qian Wang</a>, 
-        <a href="https://jianzhang.tech/">Jian Zhang</a>
-        <br>
-        IEEE Transactions on Circuits and Systems for Video Technology (<strong>TCSVT</strong>), 2022
-        <br>
-        [<a href="https://ieeexplore.ieee.org/document/9782406">Paper</a>] 
-        [<a href="https://github.com/cxh0519/VTB">Code</a>]
-        <p style="font-size: 14px;">We model pedestrian attribute recognition as a multimodal problem and build a simple visual-textual baseline to captures the intra- and cross-modal correlations.</p>
-      </td>
-    </tr>
+      <div class="publication">
+        <picture>
+          <img src="media/PCFF.png" width="180" height="140" alt="Panoptic Compositional Feature Field for Editable Scene Rendering with Network-Inferred Labels via Metric Learning" />
+        </picture>
+        <div>
+          <p class="title">Panoptic Compositional Feature Field for Editable Scene Rendering with Network-Inferred Labels via Metric Learning</p>
+          <div class="authors">
+            <strong>Xinhua Cheng</strong>, 
+            <a href="https://github.com/yanmin-wu">Yanmin Wu</a>,
+            <a href="https://scholar.google.com/citations?hl=zh-CN&user=_X9fkLQAAAAJ">Mengxi Jia</a>,
+            <a href="https://akaneqwq.github.io/">Qian Wang</a>, 
+            <a href="https://jianzhang.tech/">Jian Zhang</a>
+          </div>
+          <p class="venue">Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>), 2023</p>
+          <div class="links">
+            <span class="link"><a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Cheng_Panoptic_Compositional_Feature_Field_for_Editable_Scene_Rendering_With_Network-Inferred_CVPR_2023_paper.pdf">Paper</a></span>
+            <span class="link"><a href="https://openaccess.thecvf.com/content/CVPR2023/supplemental/Cheng_Panoptic_Compositional_Feature_CVPR_2023_supplemental.pdf">Supp</a></span>
+          </div>
+          <p class="desc">
+            We introduce metric learing for leveraging 2D network-inferred labels to obtain discriminating feature fields, leading to 3D segmentation and editing results.
+          </p>
+        </div>
+      </div>
 
-  </table>
+      <div class="publication">
+        <picture>
+          <img src="media/EDA.png" width="180" height="140" alt="EDA: Explicit Text-Decoupling and Dense Alignment for 3D Visual Grounding" />
+        </picture>
+        <div>
+          <p class="title">EDA: Explicit Text-Decoupling and Dense Alignment for 3D Visual Grounding</p>
+          <div class="authors">
+            <a href="https://github.com/yanmin-wu">Yanmin Wu</a>,
+            <strong>Xinhua Cheng</strong>, 
+            <a href="https://scholar.google.com/citations?hl=zh-CN&user=_X9fkLQAAAAJ">Mengxi Jia</a>,
+            <a href="https://zrrskywalker.github.io/">Renrui Zhang</a>, 
+            <a href="https://scholar.google.com/citations?hl=zh-CN&user=Jkkp8JAAAAAJ">Zesen Cheng</a>, 
+            <a href="https://jianzhang.tech/">Jian Zhang</a>
+          </div>
+          <p class="venue">Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>), 2023</p>
+          <div class="links">
+            <span class="link"><a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Wu_EDA_Explicit_Text-Decoupling_and_Dense_Alignment_for_3D_Visual_Grounding_CVPR_2023_paper.pdf">Paper</a></span>
+            <span class="link"><a href="https://github.com/yanmin-wu/EDA">Code</a></span>
+          </div>
+          <p class="desc">
+            We explicitly decouple the textual attributes and conduct dense alignment between such fine-grained language and point cloud objects for 3D visual grounding. 
+          </p>
+        </div>
+      </div>
 
-  <!-- Footer -->
-  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-  <tr>
-    <td>
-    <br>
-    <p align="right">
-      <font size="2">
-      Template is adapted from <a href="https://jonbarron.info/"><font size="2">Here</font></a>
-      <br>
-      Last updated: Oct 2023
-    </font>
-    </p>
-    </td>
-  </tr>
-  </table>
+      <div class="publication">
+        <picture>
+          <img src="media/MSDPA.png" width="180" height="140" alt="More is better: Multi-source Dynamic Parsing Attention for Occluded Person Re-identification" />
+        </picture>
+        <div>
+          <p class="title">More is better: Multi-source Dynamic Parsing Attention for Occluded Person Re-identification</p>
+          <div class="authors">
+            <strong>Xinhua Cheng</strong>*, 
+            <a href="https://scholar.google.com/citations?hl=zh-CN&user=_X9fkLQAAAAJ">Mengxi Jia</a>*,
+            <a href="https://akaneqwq.github.io/">Qian Wang</a>, 
+            <a href="https://jianzhang.tech/">Jian Zhang</a>
+          </div>
+          <p class="venue">ACM International Conference on Multimedia (<strong>ACM MM</strong>), 2022</p>
+          <div class="links">
+            <span class="link"><a href="https://dl.acm.org/doi/abs/10.1145/3503161.3547819">Paper</a></span>
+          </div>
+          <p class="desc">
+            We introduce the multi-source knowledge ensemble in occluded re-ID to effective leverage external semantic cues learned from different domains.
+          </p>
+        </div>
+      </div>
 
-  <script type="text/javascript">
-  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+      <div class="publication">
+        <picture>
+          <img src="media/VTB.png" width="180" height="140" alt="A Simple Visual-Textual Baseline for Pedestrian Attribute Recognition" />
+        </picture>
+        <div>
+          <p class="title">A Simple Visual-Textual Baseline for Pedestrian Attribute Recognition</p>
+          <div class="authors">
+            <strong>Xinhua Cheng</strong>*, 
+            <a href="https://scholar.google.com/citations?hl=zh-CN&user=_X9fkLQAAAAJ">Mengxi Jia</a>*,
+            <a href="https://akaneqwq.github.io/">Qian Wang</a>, 
+            <a href="https://jianzhang.tech/">Jian Zhang</a>
+          </div>
+          <p class="venue">IEEE Transactions on Circuits and Systems for Video Technology (<strong>TCSVT</strong>), 2022
+          <div class="links">
+            <span class="link"><a href="https://ieeexplore.ieee.org/document/9782406">Paper</a></span>
+            <span class="link"><a href="https://github.com/cxh0519/VTB">Code</a></span>
+          </div>
+          <p class="desc">
+            We model pedestrian attribute recognition as a multimodal problem and build a simple visual-textual baseline to captures the intra- and cross-modal correlations.
+          </p>
+        </div>
+      </div>
 
-  </script> <script type="text/javascript">
-  try {
-      var pageTracker = _gat._getTracker("UA-116734954-1");
-      pageTracker._trackPageview();
-      } catch(err) {}
-  </script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116734954-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-116734954-1');
-  </script>
-
-  </tr></td></table></body>
+    </main>
+    <footer>
+      Template is adapted from
+      <a href="https://akaneqwq.github.io/">Akaneqwq</a><br/>
+      Last updated: Jan 2024
+    </footer>
+  </body>
 </html>
-<!--  -->
+
